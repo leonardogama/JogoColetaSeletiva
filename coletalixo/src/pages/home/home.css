@@ -1,0 +1,202 @@
+@font-face {
+  font-family: 'GameOn';
+  src: url('/fonts/gameon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif; 
+}
+
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../../public/imagens/background.jpg");
+  background-size: auto; 
+  background-position: center;
+  background-repeat: repeat; 
+}
+
+.home-card {
+  background: rgba(255, 255, 255, 0.9); 
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); 
+  padding: 35px 30px; 
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.8s ease-out; 
+  border: 2px solid #8e4591; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.home-title {
+  font-family: 'GameOn', sans-serif;
+  font-size: 3rem; 
+  color: #8e4591;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2); 
+}
+
+.home-subtitle {
+  font-size: 1.3rem;
+  color: #7a3c7d;
+  margin-bottom: 25px;
+  font-weight: 500; 
+}
+
+.home-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px; 
+  padding: 10px 0;
+  color: #000000;
+  border-top: 1px dashed #ddd; 
+  border-bottom: 1px dashed #ddd; 
+}
+
+.bin-01 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  color: #444; 
+  transition: transform 0.2s ease-in-out; 
+}
+
+.bin-01:hover {
+  transform: scale(1.1); 
+}
+
+.bin-01 span {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.bin-paper-01 {
+  color: #2980b9;
+}
+
+.bin-metal-01 {
+  color: #ffbb00;
+}
+
+.bin-plastic-01 {
+  color: #f10000;
+}
+
+.bin-glass-01 {
+  color: #27ae60;
+}
+
+.home-instructions {
+  text-align: left;
+  margin-bottom: 30px; 
+  font-size: 1.05rem;
+  color: #333; 
+  line-height: 1.6; 
+}
+
+.home-instructions p {
+  margin-bottom: 12px;
+}
+
+.home-instructions ul {
+  margin: 10px 0 0 20px; 
+  padding: 0;
+  list-style-type: "♻️ ";
+}
+
+.home-instructions li {
+  margin-bottom: 8px; 
+}
+
+.start-btn {
+  background: linear-gradient(135deg, #8e4591 0%, #c665cb 100%); /* Gradiente roxo */
+  color: #fff;
+  border: none;
+  border-radius: 10px; 
+  padding: 15px 45px; 
+  font-size: 1.3rem; 
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif; 
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(142, 69, 145, 0.4); 
+  transition: all 0.3s ease; 
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+}
+
+.start-btn:hover {
+  background: linear-gradient(135deg, #c665cb 0%, #8e4591 100%); 
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(142, 69, 145, 0.5); 
+}
+
+.start-btn:active {
+  transform: scale(1) translateY(0); 
+  box-shadow: 0 3px 10px rgba(142, 69, 145, 0.3);
+}
+
+
+@media (max-width: 600px) {
+  .home-card {
+    padding: 25px 15px; 
+    max-width: 100%; 
+    border-width: 1px;
+  }
+
+  .home-title {
+    font-size: 2.4rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.1rem; 
+  }
+
+  .home-icons {
+    color: #000000;
+    margin-bottom: 20px;
+  }
+
+  .bin svg { 
+    width: 35px;
+    height: 35px;
+  }
+  .bin span {
+    font-size: 0.9rem;
+  }
+
+  .home-instructions {
+    font-size: 0.95rem; 
+    margin-bottom: 0px; 
+  }
+  .home-instructions ul {
+    list-style-type: "♻️ "; 
+    padding-left: 0px; 
+  }
+
+  .start-btn {
+    padding: 12px 35px; 
+    font-size: 1.15rem; 
+  }
+
+}

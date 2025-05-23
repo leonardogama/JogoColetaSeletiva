@@ -1,0 +1,242 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.playgame-container { 
+    background-color: #2c3e50; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.game-area {
+    background-color: rgba(255, 255, 255, 0.1); 
+    width: 100%;
+    max-width: 700px; /* Largura máxima da área de jogo */
+    height: 75vh; /* Altura da área de jogo */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Para posicionar elementos internos se necessário */
+}
+
+.score-board {
+    width: 100%;
+    display: flex; /* Adicionado para alinhar pontuação e vidas */
+    justify-content: space-between; /* Espaça a pontuação e as vidas */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px 20px; /* Ajustado padding */
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho total */
+}
+
+.score-board p {
+    font-size: 1.8rem;
+    color: #ecf0f1; /* Cor clara para o texto do placar */
+    margin: 0;
+    font-weight: bold;
+}
+
+.score-value {
+    color: #f1c40f; /* Cor amarela para o valor da pontuação */
+    margin-left: 10px;
+}
+
+.lives-container {
+    display: flex; /* Para alinhar os corações */
+}
+
+.heart-icon {
+    color: #e74c3c; /* Cor vermelha para os corações */
+    font-size: 1.6rem; /* Tamanho dos corações */
+    margin-left: 8px; /* Espaçamento entre os corações */
+}
+
+.falling-items-area {
+    width: 100%;
+    flex-grow: 1; /* Faz esta área ocupar o espaço restante */
+    border-radius: 10px;
+    display: flex; /* Changed from flex to allow absolute positioning for items */
+    /* align-items: center; */ /* Not needed if items are absolutely positioned */
+    /* justify-content: center; */ /* Not needed */
+    color: #bdc3c7;
+    font-size: 1.2rem;
+    position: relative; /* Crucial for positioning falling items */
+    overflow: hidden; /* Prevent items from showing outside if they glitch */
+    background-color: rgba(0,0,0,0.1); /* Slight background to see area */
+}
+
+.falling-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; /* Make icon visible */
+}
+
+.falling-item svg {
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5)); /* Add shadow to item for better visibility */
+}
+
+.game-over-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(44, 62, 80, 0.9);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.game-over-message p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #f1c40f;
+}
+
+.restart-button {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.restart-button:hover {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    transform: scale(1.05);
+}
+
+.trash-bins-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; 
+    width: 100%;
+    max-width: 800px;
+    padding: 20px 0; 
+    margin-top: auto; 
+}
+
+.bin-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px; 
+    padding: 10px;
+    width: 70px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.bin-wrapper:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.bin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    color: #ecf0f1; 
+}
+
+.bin svg { 
+    margin-bottom: 8px;
+}
+
+.bin span {
+    font-weight: bold;
+}
+
+.bin-metal svg { color: #faf600; }
+.bin-paper svg { color: #1c8ad3; } 
+.bin-plastic svg { color: #ff0000; } 
+.bin-glass svg { color: #1fb45d; }
+
+@media (max-width: 768px) {
+    .game-area {
+        height: 70vh;
+        max-width: 95%;
+    }
+    .score-board p {
+        font-size: 1.5rem;
+    }
+    .heart-icon {
+        font-size: 1.4rem; /* Ajusta tamanho dos corações para telas menores */
+        margin-left: 6px;
+    }
+    .trash-bins-container {
+        max-width: 100%;
+        flex-wrap: wrap; /* Permite que as lixeiras quebrem linha em telas menores */
+        justify-content: center;
+    }
+    .bin-wrapper {
+        margin: 10px; /* Ajusta margem para quando quebrar linha */
+        padding: 12px;
+    }
+    .bin svg {
+        font-size: 40px; /* Reduz um pouco o ícone */
+    }
+    .bin span {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .playgame-container {
+        padding: 10px;
+    }
+    .game-area {
+        height: 65vh;
+        padding: 15px;
+    }
+     .score-board p {
+        font-size: 1.3rem;
+    }
+    .score-board {
+        padding: 8px 15px; /* Ajusta padding do placar */
+    }
+    .heart-icon {
+        font-size: 1.2rem; /* Ajusta tamanho dos corações */
+        margin-left: 5px;
+    }
+    .trash-bins-container {
+        padding: 10px 0;
+    }
+    .bin-wrapper {
+        padding: 10px;
+        min-width: calc(50% - 20px); /* Faz com que ocupem 2 por linha */
+        box-sizing: border-box;
+    }
+     .bin svg {
+        font-size: 35px;
+    }
+}
