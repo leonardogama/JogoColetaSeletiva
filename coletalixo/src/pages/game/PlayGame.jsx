@@ -5,6 +5,9 @@ import IconePlastico from "../../components/icones/IconePlastico";
 import IconePapel from "../../components/icones/IconePapel";
 import IconeMetal from "../../components/icones/IconeMetal";
 import IconeVidro from "../../components/icones/IconeVidro";
+import IconeIfecto from "../../components/icones/IconeInfecto";
+import IconeMedico from "../../components/icones/IconeMedico";
+
 
 const ALTURA_ITEM = 40;
 const VELOCIDADE_QUEDA = 2;
@@ -15,11 +18,13 @@ const todosItensJogo = [
   { id: 'p1', icon: <IconePapel />, type: 'paper', name: 'Item Papel' },
   { id: 'm1', icon: <IconeMetal />, type: 'metal', name: 'Item Metal' },
   { id: 'g1', icon: <IconeVidro />, type: 'glass', name: 'Item Vidro' },
+  { id: 'i1', icon: <IconeIfecto />, type: 'infecto', name: 'Item Infectante' },
+  { id: 'md1', icon: <IconeMedico />, type: 'medico', name: 'Item Medicamento' },
 ];
 
 function PlayGame() {
   const [pontuacao, setPontuacao] = useState(0);
-  const [vidas, setVidas] = useState(3);
+  const [vidas, setVidas] = useState(7);
   const [itemCaindo, setItemCaindo] = useState(null);
   const [fimDeJogo, setFimDeJogo] = useState(false);
 
@@ -99,7 +104,7 @@ function PlayGame() {
   
   const reiniciarJogo = () => {
     setPontuacao(0);
-    setVidas(3);
+    setVidas(7);
     setFimDeJogo(false);
     setItemCaindo(null);
     idItemProcessadoQuedaRef.current = null; 
@@ -141,21 +146,37 @@ function PlayGame() {
           <div className="bin bin-metal">
             <FaTrashAlt size={50} />
           </div>
+          <span className="bin-label">Metal</span>
+        </div>
+        <div className="bin-wrapper" onClick={() => aoClicarNaLixeira('medico')}>
+          <div className="bin bin-medico"> 
+            <FaTrashAlt size={50} />
+          </div>
+           <span className="bin-label bin-label-quimico">Resíduo Químico</span>
         </div>
         <div className="bin-wrapper" onClick={() => aoClicarNaLixeira('paper')}>
           <div className="bin bin-paper">
             <FaTrashAlt size={50} />
           </div>
+           <span className="bin-label">Papel</span>
         </div>
         <div className="bin-wrapper" onClick={() => aoClicarNaLixeira('plastic')}>
           <div className="bin bin-plastic">
             <FaTrashAlt size={50} />
           </div>
+           <span className="bin-label">Plástico</span>
         </div>
         <div className="bin-wrapper" onClick={() => aoClicarNaLixeira('glass')}>
           <div className="bin bin-glass">
             <FaTrashAlt size={50} />
           </div>
+           <span className="bin-label">Vidro</span>
+        </div>
+        <div className="bin-wrapper" onClick={() => aoClicarNaLixeira('infecto')}>
+          <div className="bin bin-infecto"> 
+            <FaTrashAlt size={50} />
+          </div>
+           <span className="bin-label">Infectante</span>
         </div>
       </div>
     </div>

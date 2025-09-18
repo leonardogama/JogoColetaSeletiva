@@ -147,12 +147,14 @@ body, html {
     text-align: center;
     margin: 0 10px; 
     padding: 10px;
-    width: 70px;
+    width: 100px; 
+    min-height: 120px; 
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
+    box-sizing: border-box;
 }
 
 .bin-wrapper:hover {
@@ -177,9 +179,26 @@ body, html {
 }
 
 .bin-metal svg { color: #faf600; }
+.bin-medico svg { color: #fa9200; }
 .bin-paper svg { color: #1c8ad3; } 
 .bin-plastic svg { color: #ff0000; } 
 .bin-glass svg { color: #1fb45d; }
+.bin-infecto svg { color: #ededed; }
+
+
+.bin-label {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #aba6a6;
+  text-align: center;
+  max-width: 90%; /* impede que estoure da caixa */
+  word-wrap: break-word;
+}
+
+.bin-label-quimico {
+  font-size: 12px; /* um pouco menor só para esse caso */
+}
 
 @media (max-width: 768px) {
     .game-area {

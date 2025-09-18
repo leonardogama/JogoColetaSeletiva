@@ -24,6 +24,10 @@ function Home() {
             <FaTrashAlt size={40} />
             <span>Metal</span>
           </div>
+           <div className="bin-01 bin-medica-01">
+            <FaTrashAlt size={40} />
+            <span>Resíduo Químico</span>
+          </div>
           <div className="bin-01 bin-paper-01">
             <FaTrashAlt size={40} />
             <span>Papel</span>
@@ -35,6 +39,10 @@ function Home() {
           <div className="bin-01 bin-glass-01">
             <FaTrashAlt size={40} />
             <span>Vidro</span>
+          </div>
+          <div className="bin-01 bin-infecto-01">
+            <FaTrashAlt size={40} />
+            <span>Infectante</span>
           </div>
         </div>
         <div className="home-instructions">

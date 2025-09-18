@@ -90,6 +90,9 @@ body {
   margin-top: 8px;
   font-weight: bold;
 }
+.bin-medica-01 {
+  color: #fa9200;
+}
 
 .bin-paper-01 {
   color: #2980b9;
@@ -105,6 +108,9 @@ body {
 
 .bin-glass-01 {
   color: #27ae60;
+}
+.bin-infecto-01 {
+  color: #c7bebe;
 }
 
 .home-instructions {
