@@ -5,6 +5,7 @@ import { GiTrashCan } from 'react-icons/gi';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 
+
 function Home() {
   const [started, setStarted] = useState(false);
   const navigate = useNavigate(); // Inicializa useNavigate
