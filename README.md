@@ -1,91 +1,61 @@
-# Jogo Coleta Seletiva
+Jogo da Coleta Seletiva
 
-Bem-vindo ao Jogo Coleta Seletiva! Um jogo divertido e educativo onde você aprende a separar corretamente os materiais recicláveis.
+Bem-vindo ao Jogo da Coleta Seletiva!
+Um jogo divertido e educativo que ensina, de forma prática, a importância de separar corretamente os resíduos no dia a dia.
 
-## Sobre o Jogo
+🎮 Como Funciona
 
-O objetivo do jogo é clicar na lixeira correta (Metal, Papel, Plástico ou Vidro) para cada tipo de lixo que cai na tela. Quanto mais acertos, mais pontos você faz!
+O desafio é simples: quando o lixo aparecer na tela, escolha a lixeira correta.
+As categorias disponíveis são:
 
-Este projeto foi desenvolvido utilizando React e Vite.
+Metal
 
-## Como Jogar
+Papel
 
-1.  Clone este repositório.
-2.  Navegue até o diretório `coletalixo`.
-3.  Instale as dependências:
-    ```sh
-    npm install
-    ```
-4.  Inicie o servidor de desenvolvimento:
-    ```sh
-    npm run dev
-    ```
-5.  Abra o navegador e acesse `http://localhost:5173` (ou a porta indicada no terminal).
-6.  Clique em "Iniciar" para começar a jogar!
+Plástico
 
-## Scripts Disponíveis
+Vidro
 
-No diretório do projeto `coletalixo`, você pode executar:
+Infectante 🧪
 
-### `npm run dev`
+Químico ☣️
 
-Executa o aplicativo no modo de desenvolvimento.\
-Abra [http://localhost:5173](http://localhost:5173) (a porta pode variar) para visualizá-lo em seu navegador.
+Cada acerto rende pontos, e quanto mais rápido você for, maior será sua pontuação!
 
-A página será recarregada quando você fizer alterações.\
-Você também verá quaisquer erros de lint no console.
+🎓 Origem do Projeto
 
-### `npm run build`
+A ideia deste jogo nasceu a partir da iniciativa dos estudantes do curso de Enfermagem da Universidade Veiga de Almeida (UVA) – unidade Tijuca, que uniram conhecimento e criatividade para transformar a educação ambiental em uma experiência interativa.
 
-Constrói o aplicativo para produção na pasta `dist`.\
-Ele agrupa corretamente o React no modo de produção e otimiza a compilação para o melhor desempenho.
+📖 Metodologia
 
-A compilação é minificada e os nomes dos arquivos incluem hashes.\
-Seu aplicativo está pronto para ser implantado!
+O desenvolvimento do jogo seguiu as seguintes etapas:
 
-### `npm run lint`
+Pesquisa inicial – levantamento sobre os principais tipos de resíduos e suas formas adequadas de descarte, com foco no contexto hospitalar e no cotidiano.
 
-Executa o linter ESLint para verificar problemas de estilo e erros no código.
+Definição das categorias – inclusão das lixeiras tradicionais (metal, papel, plástico e vidro) e das específicas para resíduos infectantes e químicos, ampliando o caráter educativo.
 
-### `npm run preview`
+Design do jogo – criação de uma interface simples e intuitiva, voltada para promover aprendizado de forma lúdica e interativa.
 
-Inicia um servidor local para visualizar a compilação de produção feita pelo `npm run build`.
+Implementação técnica – desenvolvimento do sistema utilizando React e Vite, garantindo leveza e bom desempenho.
 
-## Estrutura do Projeto
+Deploy e validação – hospedagem do projeto na Vercel, possibilitando fácil acesso pela web, além de testes realizados pelos estudantes para avaliar jogabilidade, clareza das informações e impacto educativo.
 
-```
-coletalixo/
-├── public/             # Arquivos estáticos (imagens, fontes)
-├── src/                # Código fonte da aplicação
-│   ├── components/     # Componentes React reutilizáveis
-│   ├── pages/          # Componentes de página (Home, Jogo)
-│   ├── main.jsx        # Ponto de entrada principal da aplicação React
-│   └── ...
-├── .gitignore          # Arquivos e pastas ignorados pelo Git
-├── Dockerfile          # Configuração para containerização com Docker
-├── eslint.config.js    # Configuração do ESLint
-├── index.html          # Template HTML principal
-├── nginx.conf          # Configuração do Nginx para o Docker
-├── package.json        # Metadados do projeto e dependências
-├── README.md           # Este arquivo
-└── vite.config.js      # Configuração do Vite
-```
+🛠️ Tecnologias Utilizadas
 
-## Tecnologias Utilizadas
+React – biblioteca JavaScript para criação da interface.
 
-*   React
-*   Vite
-*   React Router DOM
-*   React Icons
-*   ESLint
-*   Docker
-*   Nginx
+Vite – ferramenta de build e desenvolvimento rápido.
 
----
+Vercel – plataforma de deploy e hospedagem do jogo.
 
-Este template fornece uma configuração mínima para fazer o React funcionar no Vite com HMR e algumas regras ESLint.
+🕹️ Como Jogar
 
-Atualmente, dois plugins oficiais estão disponíveis:
+Acesse o jogo diretamente pelo link:
+👉 https://jogo-coleta-seletiva-ess1jydzy-leonardo-gamas-projects.vercel.app
+
+Faça login utilizando sua conta Gmail.
+
+Clique em "Iniciar" para começar a jogar!
 
 -   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) usa [Babel](https://babeljs.io/) para Fast Refresh
 -   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) usa [SWC](https://swc.rs/) para Fast Refresh
